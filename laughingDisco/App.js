@@ -1,7 +1,8 @@
 // import library
 import React from 'react';
-import { Text, AppRegistry } from 'react-native';
+import { Text, AppRegistry, View } from 'react-native';
 import Header from './src/components/header';
+import AlbumList from './src/components/list';
 
 // creates components (<ComponentName /> to use it)
 
@@ -11,6 +12,11 @@ const HeaderText = () => (<Text>LaughingDisco</Text>);
 
 export default class App extends React.Component {
   render () {
-    return (<Header headerText = {<HeaderText/>}/>);
+    return (
+      <View>
+        <Header headerText = {<HeaderText/>}/>
+        <AlbumList/>
+      </View>
+      );
   }
 }
