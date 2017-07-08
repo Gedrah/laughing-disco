@@ -1,23 +1,16 @@
+// import library
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, AppRegistry } from 'react-native';
+import Header from './src/components/header';
+
+// creates components (<ComponentName /> to use it)
+
+const SomeText = () => (<Text>Some Text on screen !</Text>);
+
+// render component
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Ok it works pretty nicely yeap ! </Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
+  render () {
+    return (<Header/>);
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
