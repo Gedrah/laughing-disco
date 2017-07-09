@@ -14,7 +14,7 @@ export default class App extends React.Component {
   render () {
     return (
       <View style={{flex: 1, backgroundColor: '#dac7f6'}} >
-        <Header headerText = {"LaughingDisco"}/>
+        <Header>LaughingDisco</Header>
         <AlbumList/>
       </View>
       );

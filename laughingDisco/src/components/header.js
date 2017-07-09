@@ -5,10 +5,9 @@ import { View, ToolbarAndroid, StatusBar } from 'react-native';
 // create component
 const Header = (props) => {
     const { textStyles, toolBar } = styles;
-    const text = props.headerText;
     return (
         <View>
-            <ToolbarAndroid style={toolBar} title="LaughingDisco"/>
+            <ToolbarAndroid style={toolBar} title={props.children}/>
         </View>    
     );
 };

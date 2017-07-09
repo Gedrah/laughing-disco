@@ -22,7 +22,9 @@ const Datas = (props) => {
             </CardItem>
             
             <CardItem>
-                <Button Pressed={ () => Linking.openURL(props.record.url)}/>
+                <Button Pressed={ () => Linking.openURL(props.record.url)}>
+                    Buy Now !
+                </Button>
             </CardItem>
         </Card>
     );
