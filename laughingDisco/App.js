@@ -13,8 +13,8 @@ const HeaderText = () => (<Text>LaughingDisco</Text>);
 export default class App extends React.Component {
   render () {
     return (
-      <View style={{flex: 1}} >
-        <Header headerText = {<HeaderText/>}/>
+      <View style={{flex: 1, backgroundColor: '#dac7f6'}} >
+        <Header headerText = {"LaughingDisco"}/>
         <AlbumList/>
       </View>
       );
