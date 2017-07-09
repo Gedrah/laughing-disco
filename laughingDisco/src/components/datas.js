@@ -1,12 +1,47 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Text, Image, View} from 'react-native';
+import Card from './cards';
+import CardItem from './carditems';
 
 const Datas = (props) => {
     return (
-        <View>
-            <Text>{props.record.title}</Text>
-        </View>
+        <Card>
+            <CardItem>
+                <View style={styles.AlbumStyle}>
+                    <Image style={styles.ImageStyle} source={{uri: props.record.thumbnail_image}}/>
+                </View>
+                <View style={styles.HeaderContentStyles}>
+                    <Text>{props.record.title}</Text>
+                    <Text>{props.record.artist}</Text>
+                </View>
+            </CardItem>
+            <CardItem>
+                <Image style={styles.BigPicture} source={{uri: props.record.image}}/>                    
+            </CardItem>
+        </Card>
     );
+};
+
+const styles = {
+    HeaderContentStyles: {
+        flexDirection: 'column',
+        justifyContent: 'space-around'
+    },
+    ImageStyle: {
+        height: 50,
+        width: 50
+    },
+    AlbumStyle: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 10,
+        marginRight: 10
+    },
+    BigPicture: {
+        height: 300,
+        width: null,
+        flex: 1,
+    }
 };
 
 export default Datas;
