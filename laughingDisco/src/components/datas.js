@@ -1,7 +1,8 @@
 import React from 'react';
-import {Text, Image, View} from 'react-native';
+import {Text, Image, View, Linking} from 'react-native';
 import Card from './cards';
 import CardItem from './carditems';
+import Button from './button';
 
 const Datas = (props) => {
     return (
@@ -15,8 +16,13 @@ const Datas = (props) => {
                     <Text>{props.record.artist}</Text>
                 </View>
             </CardItem>
+
             <CardItem>
                 <Image style={styles.BigPicture} source={{uri: props.record.image}}/>                    
+            </CardItem>
+            
+            <CardItem>
+                <Button Pressed={ () => Linking.openURL(props.record.url)}/>
             </CardItem>
         </Card>
     );
